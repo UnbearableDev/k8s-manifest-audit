@@ -1,0 +1,23 @@
+{
+	"actorSpecification": 1,
+	"name": "k8s-manifest-audit",
+	"title": "Kubernetes Manifest Audit (kube-linter)",
+	"description": "Static audit of Kubernetes manifests via MCP. Powered by kube-linter \u2014 63 checks across security, resources, availability, and config. Pay-per-event. Call from Claude Desktop, Cursor, n8n, or any MCP client. Built by Unbearable TechTips.",
+	"version": "0.2",
+	"buildTag": "latest",
+	"usesStandbyMode": true,
+	"meta": {
+		"templateId": "python-mcp-empty",
+		"generatedBy": "Claude Code with Claude Sonnet 4.6"
+	},
+	"input": {
+		"title": "Actor input schema",
+		"description": "MCP server runs in Standby mode \u2014 input is supplied via MCP tool calls, not Actor input.",
+		"type": "object",
+		"schemaVersion": 1,
+		"properties": {},
+		"required": []
+	},
+	"dockerfile": "../Dockerfile",
+	"webServerMcpPath": "/mcp"
+}
