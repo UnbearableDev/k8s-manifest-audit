@@ -1,0 +1,12 @@
+{
+    "audit-call": {
+        "eventTitle": "Kubernetes manifest audit call",
+        "eventDescription": "Charged once per audit_manifest or audit_directory tool call. Returns findings with severity, check ID, remediation, and object location.",
+        "eventPriceUsd": 0.02
+    },
+    "list-checks": {
+        "eventTitle": "List available checks",
+        "eventDescription": "Charged for discovery calls to list_checks or explain_check. Returns the full kube-linter check catalog.",
+        "eventPriceUsd": 0.005
+    }
+}
