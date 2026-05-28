@@ -1,0 +1,24 @@
+runtime: external
+type: streamable-http
+url: https://unbearable-dev--k8s-manifest-audit.apify.actor/mcp
+auth:
+  type: bearer
+  description: Apify API token (any Apify user can generate one in their console)
+metadata:
+  name: k8s-manifest-audit
+  display_name: Kubernetes Manifest Audit
+  description: Static audit of Kubernetes manifests powered by kube-linter — 63 checks across security, RBAC, resources, availability, network, and config categories.
+  tags: [kubernetes, k8s, kube-linter, security, audit, devops, rbac, static-analysis, mcp]
+  license: MIT
+  publisher: unbearabledev
+  homepage: https://github.com/UnbearableDev/k8s-manifest-audit
+workflow_prompts:
+  - name: audit_manifest_local
+    description: Audit a single Kubernetes manifest YAML string. Returns findings with severity, check ID, remediation hint, and object location.
+    prompt: Audit my Kubernetes deployment manifest for security and config issues. Here is the YAML: <paste manifest here>
+  - name: audit_directory_multi
+    description: Audit multiple Kubernetes manifests together so cross-file checks (dangling Service, mismatching selector) fire correctly.
+    prompt: Audit all Kubernetes manifests in my /k8s directory. Pass them as a dict mapping filename to YAML content.
+  - name: explain_check
+    description: Get full details on a specific kube-linter check by ID. Useful when a finding needs more context before applying the fix.
+    prompt: Explain the kube-linter check 'privileged-container' — what does it catch and how do I fix it?
