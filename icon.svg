@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- k8s-manifest-audit: N2 (center) highlighted r=19, all four edges glow cyan -->
+  <rect width="200" height="200" rx="31" fill="#0F172A"/>
+  <!-- All four edges glow cyan (N2 is the audited root) -->
+  <line x1="100" y1="100" x2="56" y2="56" stroke="#06B6D4" stroke-width="6" stroke-linecap="round"/>
+  <line x1="100" y1="100" x2="144" y2="63" stroke="#06B6D4" stroke-width="6" stroke-linecap="round"/>
+  <line x1="100" y1="100" x2="69" y2="150" stroke="#06B6D4" stroke-width="6" stroke-linecap="round"/>
+  <line x1="100" y1="100" x2="150" y2="144" stroke="#06B6D4" stroke-width="6" stroke-linecap="round"/>
+  <!-- N1 inactive -->
+  <circle cx="56" cy="56" r="13" fill="#F8FAFC"/>
+  <!-- N2 highlighted center: r=19 (6×3.125), blue fill, ink inner ring -->
+  <circle cx="100" cy="100" r="19" fill="#3B82F6"/>
+  <circle cx="100" cy="100" r="8" fill="#0F172A"/>
+  <!-- N3 inactive -->
+  <circle cx="144" cy="63" r="13" fill="#F8FAFC"/>
+  <!-- N4 inactive -->
+  <circle cx="69" cy="150" r="13" fill="#F8FAFC"/>
+  <!-- N5 inactive -->
+  <circle cx="150" cy="144" r="13" fill="#F8FAFC"/>
+  <!-- Kubernetes hex motif: regular hexagon outline around center node -->
+  <polygon points="100,72 123,84 123,108 100,120 77,108 77,84" fill="none" stroke="#3B82F6" stroke-width="3" opacity="0.45"/>
+  <!-- Small k8s helm-like spokes at hex corners for recognition -->
+  <line x1="100" y1="72" x2="100" y2="62" stroke="#3B82F6" stroke-width="2" opacity="0.4"/>
+  <line x1="123" y1="84" x2="131" y2="79" stroke="#3B82F6" stroke-width="2" opacity="0.4"/>
+  <line x1="123" y1="108" x2="131" y2="113" stroke="#3B82F6" stroke-width="2" opacity="0.4"/>
+  <line x1="100" y1="120" x2="100" y2="130" stroke="#3B82F6" stroke-width="2" opacity="0.4"/>
+  <line x1="77" y1="108" x2="69" y2="113" stroke="#3B82F6" stroke-width="2" opacity="0.4"/>
+  <line x1="77" y1="84" x2="69" y2="79" stroke="#3B82F6" stroke-width="2" opacity="0.4"/>
+</svg>
