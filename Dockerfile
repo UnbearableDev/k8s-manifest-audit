@@ -1,9 +1,10 @@
 FROM apify/actor-python:3.14
 
-# Vendor kube-linter ARM64 binary
+# Download kube-linter for amd64 (Apify cloud builder is always x86_64)
 ARG KUBE_LINTER_VERSION=0.8.3
-ADD https://github.com/stackrox/kube-linter/releases/download/v${KUBE_LINTER_VERSION}/kube-linter-linux_arm64 /usr/local/bin/kube-linter
-RUN chmod +x /usr/local/bin/kube-linter
+RUN curl -fsSL -o /usr/local/bin/kube-linter \
+      https://github.com/stackrox/kube-linter/releases/download/v${KUBE_LINTER_VERSION}/kube-linter-linux_amd64 \
+    && chmod +x /usr/local/bin/kube-linter
 
 USER myuser
 
