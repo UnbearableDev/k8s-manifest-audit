@@ -44,7 +44,7 @@ Point any MCP-capable client (Claude Desktop, Cursor, n8n, Make, Zapier, custom 
 ## Check catalog (sample — 63 checks total)
 
 | Check ID | Category | Severity (mapped) |
-|----------|----------|--------------------|
+|----------|----------|-------------------|
 | `privileged-container` | security | high |
 | `privilege-escalation-container` | security | high |
 | `run-as-non-root` | security | high |
@@ -74,4 +74,4 @@ Powered by [kube-linter](https://github.com/stackrox/kube-linter) (MIT, StackRox
 
 ---
 
-Built by Noel @ Unbearable TechTips — more like this in the weekly newsletter [link].
+Built by Noel @ Unbearable TechTips — more like this in the [weekly newsletter](https://unbearabletechtips.beehiiv.com).
