@@ -159,6 +159,13 @@ CATEGORY_MAP: dict[str, str] = {
     "sorted-keys": "config",
 }
 
+_ANNOTATIONS = {
+    "readOnlyHint": True,
+    "destructiveHint": False,
+    "idempotentHint": True,
+    "openWorldHint": False,
+}
+
 
 def _map_severity(check_name: str) -> Severity:
     return SEVERITY_MAP.get(check_name, "low")
@@ -299,7 +306,7 @@ LANDING_HTML = b"""<!doctype html>
 def get_server() -> FastMCP:
     server = FastMCP("k8s-manifest-audit", "0.1.0")
 
-    @server.tool()
+    @server.tool(annotations=_ANNOTATIONS)
     async def audit_manifest(
         manifest_content: str | None = None,
         yaml_content: str | None = None,
@@ -361,7 +368,7 @@ def get_server() -> FastMCP:
             },
         }
 
-    @server.tool()
+    @server.tool(annotations=_ANNOTATIONS)
     async def audit_directory(files: dict[str, str]) -> dict[str, Any]:
         """Audit multiple Kubernetes manifest files at once.
 
@@ -404,7 +411,7 @@ def get_server() -> FastMCP:
             },
         }
 
-    @server.tool()
+    @server.tool(annotations=_ANNOTATIONS)
     async def list_checks(enabled_only: bool = False) -> dict[str, Any]:
         """Return the full kube-linter check catalog (63 checks).
 
@@ -427,7 +434,7 @@ def get_server() -> FastMCP:
             },
         }
 
-    @server.tool()
+    @server.tool(annotations=_ANNOTATIONS)
     async def explain_check(check_id: str) -> dict[str, Any]:
         """Return detailed information about a single kube-linter check.
 
