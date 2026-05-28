@@ -1,8 +1,8 @@
 # k8s-manifest-audit
 
-> **k8s-manifest-audit** — static audit of Kubernetes manifests via MCP. Powered by kube-linter. Part of the Unbearable TechTips audit shop.
+> **k8s-manifest-audit** — static audit of Kubernetes manifests via MCP. Powered by kube-linter. Part of the Unbearable Labs audit shop.
 
-**Built by [Unbearable TechTips](https://github.com/UnbearableDev).** Pay-per-event pricing — only billed when a tool is actually called.
+**Built by [Unbearable Labs](https://github.com/UnbearableDev).** Pay-per-event pricing — only billed when a tool is actually called.
 
 ---
 
@@ -74,4 +74,4 @@ Powered by [kube-linter](https://github.com/stackrox/kube-linter) (MIT, StackRox
 
 ---
 
-Built by Noel @ Unbearable TechTips — more like this in the [weekly newsletter](https://unbearabletechtips.beehiiv.com).
+Built by Noel @ Unbearable Labs — more like this in the [weekly newsletter](https://unbearabletechtips.beehiiv.com).
