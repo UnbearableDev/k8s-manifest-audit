@@ -11,6 +11,7 @@ metadata:
   tags: [kubernetes, k8s, kube-linter, security, audit, devops, rbac, static-analysis, mcp]
   license: MIT
   publisher: unbearabledev
+  icon: icon.svg
   homepage: https://github.com/UnbearableDev/k8s-manifest-audit
 workflow_prompts:
   - name: audit_manifest_local
